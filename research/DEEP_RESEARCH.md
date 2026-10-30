@@ -4,6 +4,34 @@
 **Copyright:** © 2026 Sandeep Barupal. All rights reserved, except as stated below.  
 **Research status:** Detailed research draft — pehle product ka focus choose karein: learning tool, Git client ya repository collaboration.
 
+## Research Overview
+
+| Item | Details |
+|---|---|
+| Product | Git |
+| Main focus | Version control aur Git workflow |
+| Language | Aasaan Hindi + simple English |
+| Owner / Content Creator | Sandeep Barupal |
+| Copyright | © 2026 Sandeep Barupal |
+
+## Table of Contents
+
+- [1. Git kya hai?](#1-git-kya-hai)
+- [2. Kiske kaam aayega?](#2-kiske-kaam-aayega)
+- [3. Product ka focus kya ho?](#3-product-ka-focus-kya-ho)
+- [4. Main features](#4-main-features)
+- [5. Pages / screens](#5-pages-screens)
+- [6. Main workflow](#6-main-workflow)
+- [7. Technical planning](#7-technical-planning)
+- [8. Security](#8-security)
+- [9. Development phases](#9-development-phases)
+- [10. Success metrics](#10-success-metrics)
+- [11. Risks](#11-risks)
+- [12. Original product idea](#12-original-product-idea)
+- [13. Sources](#13-sources)
+
+---
+
 ## 1. Git kya hai?
 Git code aur files ke changes ka history rakhta hai. Isse team dekh sakti hai ki kya badla, kisne badla aur purane version par kaise wapas jaana hai. GitHub jaisi hosting service repository ko online rakhkar collaboration mein help karti hai.
 
@@ -66,3 +94,4 @@ Git history ko visual timeline mein dikhayein aur har action ke saath simple exp
 - [GitHub REST API](https://docs.github.com/en/rest)
 
 **Note:** Git/GitHub ka logo, branding ya proprietary UI seedha copy na karein.
+
