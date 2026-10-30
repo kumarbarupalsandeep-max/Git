@@ -59,3 +59,28 @@ Risks: scope confusion, repository data loss, permission bugs, unsafe CI, storag
 
 ## 10. Next work
 Write a product-boundary decision record, compare current GitHub/GitLab/Bitbucket collaboration workflows, define permissions and threat model, then prototype repository history and review flows.
+
+## 15. Deep research addendum — evidence and product decisions
+
+### Market evidence
+Git is the local distributed version-control system; GitHub adds hosted repositories and collaboration workflows. VS Code’s documentation explains that its editor source-control UI operates on the same repository as command-line Git and supports review, staging, commits, branches, push/pull, and conflict recovery. GitHub security documentation also demonstrates that repository collaboration increasingly includes code scanning, dependency review, and secret protection, with some controls dependent on repository visibility and plan. Sources: [Git documentation](https://git-scm.com/doc), [Pro Git book](https://git-scm.com/book/en/v2), [GitHub Features](https://github.com/features), [VS Code source control](https://code.visualstudio.com/docs/sourcecontrol/overview), [GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security).
+
+### Competitive implications
+Clarify whether Git is a Git learning/visualization tool, a repository hosting/collaboration platform, or a GUI client. These are distinct products. Building a new distributed version-control engine is not a sensible MVP unless there is a research-specific reason; a more achievable product can explain Git concepts, visualize history, and integrate with existing Git remotes.
+
+### Recommended core workflows
+1. Initialize or clone a repository and explain working tree, index, and commit history.
+2. Show branch graph, diffs, tags, remotes, merge/rebase states, and conflict resolution.
+3. Provide safe undo flows with previews for reset, revert, restore, and clean.
+4. Offer PR/MR collaboration only when connected to a supported hosting provider.
+5. Provide onboarding exercises with disposable repositories and guided recovery.
+6. Add policy checks for protected branches, signed commits, secrets, and dependency risk through integrations.
+
+### Technical and safety decisions
+Use the existing Git executable/library for actual repository operations where possible; keep the UI layer separate from Git execution. Treat repository hooks, filters, and submodules as potentially untrusted. Avoid destructive commands without preview, confirmation, and recovery guidance. Store credentials in OS secure storage or managed secret stores, never plain text.
+
+### Validation and success measures
+Track task completion for common Git workflows, conflict recovery success, accidental data-loss incidents, clone/fetch/push reliability, onboarding completion, and hosting integration failures. Test against repositories with large histories, binary files, submodules, and unusual branch graphs.
+
+### Sources and caveats
+GitHub is a hosted collaboration product, not Git itself. Product positioning, hosting, and collaboration requirements should be settled before implementation scope is expanded.
